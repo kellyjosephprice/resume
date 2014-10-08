@@ -4,25 +4,36 @@
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{framed}
-\usepackage[urlcolor=blue, linkcolor=blue, colorlinks=true]{hyperref}
 \usepackage{tipa}
 \usepackage{multicol}
-\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{tabularx}
 \usepackage{ragged2e}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+\usepackage[urlcolor=blue,colorlinks=true]{hyperref}
 
-\textwidth = 16.51cm
-\textheight = 22.86cm
-\topmargin = -1cm
+\textwidth = 17.51cm
+\textheight = 24.86cm
+\topmargin = -1.5cm
 \headheight = 0cm
 \headsep = 0cm
 \oddsidemargin = 0cm
-\hoffset = -.5cm
+\hoffset = -1cm
 \marginparpush = 0cm
 \widowpenalty = 300
 \clubpenalty = 300
 
+\definecolor{light-gray}{gray}{.85}
+\definecolor{dark-gray}{gray}{.20}
+
 \renewcommand*{\familydefault}{\sfdefault}
+\makeatletter
+\newcommand{\globalcolor}[1]{
+    \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+\AtBeginDocument{\globalcolor{dark-gray}}
 
 \newcolumntype{A}{>{\raggedleft\let\newline\\\arraybackslash}X}
 \newcolumntype{C}{>{\centering\let\newline\\\arraybackslash}X}
@@ -52,30 +63,37 @@
 
 \begin{tabularx}{\textwidth}{CCCC}
     \large
-    \href{kellyjosephprice.github.io}{Personal Profile}
+    \href{http://kellyjosephprice.github.io}{Personal Profile}
     &
+    \large
     \href{https://github.com/kellyjosephprice}{Github}
     &
+    \large
     \href{https://www.linkedin.com/pub/kelly-price/22/760/a11}{Linked-in}
     &
+    \large
     \href{https://careers.stackoverflow.com/kellyjosephprice}{Stack Overflow}
     \normalsize
+
+    \\
 \end{tabularx}
 
-\begin{tabular}{L{3cm} R{13.5cm}}
-     \hline \\
+\begin{tabular}{L{3cm} R{14.5cm}}
+    \arrayrulecolor{light-gray}
+    
+    \hline \\
 
-    \Large{\textbf{skills}}
+    \large{\textbf{skills}}
     \normalsize
 
     &
 
-    Ruby, Ruby on Rails, Javascript, jQuery, Backbone.js, SQL, git, HTML,
-    CSS, perl, Linux
+    Ruby, Ruby on Rails, Javascript, jQuery, Backbone.js, SQL, git, 
+    subversion, HTML, CSS, perl, Linux
     
     \\ \hline \\
 
-    \Large{\textbf{projects}} \\\\
+    \large{\textbf{projects}} \\\\
     \normalsize
     
     \href{http://www.ramblr.co}{\large{\textbf{ramblr}}}
@@ -93,8 +111,8 @@
     }
 
     \paragraph{\textit{features}}{
-        Polymorphic Associations, Concerns, Russian Doll Caching and Cache 
-        Digests
+        polymorphic associations, concerns, russian doll caching and cache 
+        digests
     }
 
     \\\\
@@ -106,23 +124,23 @@
     
     &
     
-    A clone of reddit using a reimplementaion of rails and
-    activerecord.
+    A clone of reddit using a reimplementaion of Rails and
+    ActiveRecord.
 
     \paragraph{\textit{technologies}}{
         Ruby, ActiveSupport, SQL, HTML, CSS
     }
 
     \paragraph{\textit{features}}{
-        Rewrote ActiveRecord, ActionController
+        rewrote ActiveRecord, ActionController
     }
 
     \\ \hline \\
 
-    \Large{\textbf{employment}} \\\\
+    \large{\textbf{employment}} \\\\
     \normalsize
 
-    February 2013 - June 2014
+    February 2013 - July 2014
     
     &
 
@@ -130,10 +148,12 @@
     Barracuda Networks
 
     \begin{itemize}
-        \item maintained and rewrote install scripts for linux (custom
-            and CentOS) on hardware appliances
+        \item maintained and rewrote install scripts for Barracuda's Linux 
+            (custom and CentOS) for all hardware appliances
         \item created a client/server system for profiling lifespans of
             SSDs
+        \item handled support cases for hardware and OS level issues
+        \item used agile development methods
     \end{itemize}
 
     \\\\
@@ -146,6 +166,8 @@
     \begin{itemize}
         \item wrote initramfs scripts to automatically repartition and 
             format additional disk space added to VM's
+        \item maintained build system to convert hardware appliances to VM's
+            (VMWare, Hyper-V, Xen, VirtualBox) for all of Barracuda's VM products
     \end{itemize}
 
     \\\\
@@ -157,10 +179,12 @@
     
     \\\\ \hline \\
 
-    \Large{\textbf{education}} \\\\
+    \large{\textbf{education}} \\\\
     \normalsize
 
     August 2014 & App Academy \\
+
+    \\
 
     2010 - 2013 & De Anza Community College \\
 \end{tabular}
