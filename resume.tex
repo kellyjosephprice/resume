@@ -9,25 +9,29 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{tabularx}
 \usepackage{ragged2e}
-\usepackage[default]{sourcesanspro}
-\usepackage[T1]{fontenc}
-\usepackage[urlcolor=blue,colorlinks=true]{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 
-\textwidth = 17.51cm
+\usepackage{tgadventor}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+
+\textwidth = 16.51cm
 \textheight = 24.86cm
-\topmargin = -1.5cm
+\topmargin = -1cm
 \headheight = 0cm
 \headsep = 0cm
 \oddsidemargin = 0cm
-\hoffset = -1cm
+\hoffset = -.5cm
 \marginparpush = 0cm
 \widowpenalty = 300
 \clubpenalty = 300
 
-\definecolor{light-gray}{gray}{.85}
-\definecolor{dark-gray}{gray}{.20}
+\definecolor{cadetblue}{HTML}{4A6491}
+\definecolor{light-gray}{gray}{.90}
+\definecolor{dark-gray}{gray}{.25}
 
-\renewcommand*{\familydefault}{\sfdefault}
+\hypersetup{urlcolor=cadetblue}
+
 \makeatletter
 \newcommand{\globalcolor}[1]{
     \color{#1}\global\let\default@color\current@color
@@ -44,54 +48,41 @@
 \begin{document}
 \thispagestyle{empty} 
 
-\center \huge{\textbf{Kelly Joseph Price}}
+\center \huge{Kelly Joseph Price}
 \normalsize
 
 \hspace{.5cm}
 
-\begin{tabularx}{\textwidth}{AX}
+{
+    \centering
+    \footnotesize
+    \begin{tabular}{rl}
+        \href{https://github.com/kellyjosephprice}{Github}
+        &
+        754 The Alameda APT 4207
+        \\
+        \href{http://kellyjosephprice.tumblr.com}{Blog}
+        &
+        San Jose, CA
+        \\
+        \href{http://kellyjosephprice.github.io}{Profile}
+        &
+        \\
+        \href{https://www.linkedin.com/pub/kelly-price/22/760/a11}{Linked-in}
+        &
+        \href{mailto:kellyjosephprice@gmail.com}{kellyjospehprice@gmail.com}
+        \\
+        \href{https://careers.stackoverflow.com/kellyjosephprice}{Stack Overflow}
+        &
+        (925) 234-2914
+        \\\\
+    \end{tabular}
+}
 
-    \href{mailto:kellyjosephprice@gmail.com}{kellyjospehprice@gmail.com}\newline
-    (925) 234-2914
-    
-    &
-
-    754 The Alameda APT 4207\newline
-    San Jose, CA
-
-\end{tabularx}
-
-\begin{tabularx}{\textwidth}{CCCC}
-    \large
-    \href{http://kellyjosephprice.github.io}{Personal Profile}
-    &
-    \large
-    \href{https://github.com/kellyjosephprice}{Github}
-    &
-    \large
-    \href{https://www.linkedin.com/pub/kelly-price/22/760/a11}{Linked-in}
-    &
-    \large
-    \href{https://careers.stackoverflow.com/kellyjosephprice}{Stack Overflow}
-    \normalsize
-
-    \\
-\end{tabularx}
-
-\begin{tabular}{L{3cm} R{14.5cm}}
+\begin{tabular}{L{2.5cm} R{14cm}}
     \arrayrulecolor{light-gray}
     
     \hline \\
-
-    \large{\textbf{skills}}
-    \normalsize
-
-    &
-
-    Ruby, Ruby on Rails, Javascript, jQuery, Backbone.js, SQL, git, 
-    subversion, HTML, CSS, perl, Linux
-    
-    \\ \hline \\
 
     \large{\textbf{projects}} \\\\
     \normalsize
@@ -104,16 +95,10 @@
     &
     
     A yelp-like single-page application. It was designed with a more
-    minimal aesthetic.
-
-    \paragraph{\textit{technologies}}{
-        Ruby on Rails, Javascript, jQuery, Backbone.js, SQL, HTML, CSS,
-    }
-
-    \paragraph{\textit{features}}{
-        polymorphic associations, concerns, russian doll caching and cache 
-        digests
-    }
+    minimal aesthetic. Backbone consumes a RESTful Rails API. There is a categorical
+    autocomplete and search using custom routes. Uses polymorphic associations. 
+    The API is optimized with eager loading, russian doll caching, and counter
+    caching. Code is DRY'd up using concerns and scopes.
 
     \\\\
     
@@ -124,16 +109,19 @@
     
     &
     
-    A clone of reddit using a reimplementaion of Rails and
-    ActiveRecord.
+    A clone of reddit as an attempt to rewrite as much as possible from
+    scratch. Rewrote ActiveRecord and ActiveResource. Handles a similiar route
+    DSL. Manages sessions and flashes through WEBrick's cookie interface.
 
-    \paragraph{\textit{technologies}}{
-        Ruby, ActiveSupport, SQL, HTML, CSS
-    }
+    \\ \hline \\
 
-    \paragraph{\textit{features}}{
-        rewrote ActiveRecord, ActionController
-    }
+    \large{\textbf{skills}}
+    \normalsize
+
+    &
+
+    Ruby, Ruby on Rails, Javascript, jQuery, Backbone.js, SQL, RSpec, git, 
+    subversion, HTML, CSS, perl, Linux
 
     \\ \hline \\
 
