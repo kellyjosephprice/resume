@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage{tipa}
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage[colorlinks=true]{hyperref}
+
+\usepackage{tgadventor}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+
+\textwidth = 16.51cm
+\textheight = 24.86cm
+\topmargin = -1cm
+\headheight = 0cm
+\headsep = 0cm
+\oddsidemargin = 0cm
+\hoffset = -.5cm
+\marginparpush = 0cm
+\widowpenalty = 300
+\clubpenalty = 300
+\setlength\parindent{0pt}
+
+\definecolor{cadetblue}{HTML}{4A6491}
+\definecolor{light-gray}{gray}{.90}
+\definecolor{dark-gray}{gray}{.25}
+
+\hypersetup{urlcolor=cadetblue}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{
+    \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+\AtBeginDocument{\globalcolor{dark-gray}}
+
+\newcolumntype{A}{>{\raggedleft\let\newline\\\arraybackslash}X}
+\newcolumntype{C}{>{\centering\let\newline\\\arraybackslash}X}
+
+\newcolumntype{L}[1]{>{\raggedleft\let\newline\\\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedright\let\newline\\\arraybackslash}p{#1}}
+
+\begin{document}
+
+\huge{Kelly Joseph Price}
+\normalsize
+
+\hspace{.5cm}
+
+754 The Alameda APT 4207 \\
+San Jose, CA \\
+\href{mailto:kellyjosephprice@gmail.com}{kellyjospehprice@gmail.com} \\
+(925) 234-2914 \\
+
+\vspace{6cm}
+
+Dear One Degree Team,
+\\\\
+I'm very interested in your Engineer position you have
+posted on your website. I'm a web developer with experience in Ruby on
+Rails and Javascript. I'm comfortable working with the whole software
+stack. Specifically, I have worked with: \\
+\\
+$\cdot$ Ruby on Rails as an API, and it's optimization \\
+$\cdot$ Backbone.js front end, including jQuery and pure Javascript \\
+$\cdot$ perl to write features and internal tools \\
+$\cdot$ Linux deployment and as an environment \\
+\\
+Please take a moment to look over my resume.
+
+\vspace{1cm}
+
+Cheers,
+\\\\
+Kelly Price
+
+\end{document}
