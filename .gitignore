@@ -2,6 +2,7 @@
 !*/
 
 !.gitignore
+!README*
 
 !resume-kprice.tex
 !resume-kprice.pdf
